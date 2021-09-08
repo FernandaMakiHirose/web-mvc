@@ -24,7 +24,7 @@ Passo 3:
 `docker logs sqldica`
 
 Passo 4:
-Quando o projeto abrir, no `Authorize` escreva: Bearer
+Quando o projeto abrir, no Authorize escreva: `Bearer`
 
 ## Objetivo front-end
 - Configurar o front-end
