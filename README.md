@@ -5,6 +5,9 @@
 - Visual Studio
 - Docker
 
+## Licença
+Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
+
 ## Criação do projeto
 - Visual Studio
 - ASP.NET Core Web Application
