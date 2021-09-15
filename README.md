@@ -76,3 +76,26 @@ else
 {
     ModelState.AddModelError("", "Erro ao cadastrar");
 ```
+
+## Refit
+1. Instalação da biblioteca Refit no NuGet (`Refit` e `Refit.HttpClientFactory`)
+2. Com ela adicionamos endpoints e deixamos o código assíncrono 
+3. Por fim adicionamos o seguinte código no arquivo `Startup.cs`:
+
+```
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllersWithViews();
+    services.AddHttpContextAccessor();
+
+    var clientHandler = new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; }
+    };
+
+    services.AddRefitClient<IUsuarioService>()
+        .ConfigureHttpClient(c =>
+        {
+            c.BaseAddress = new Uri(Configuration.GetValue<string>("UrlApiCurso"));
+        }).ConfigurePrimaryHttpMessageHandler(c => clientHandler);
+```
