@@ -8,6 +8,12 @@
 ## Licença
 Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 
+## Objetivo front-end
+- Configurar o front-end
+- Design Pattern MVC
+- Integrar com o back-end
+- Proteger o front-end
+
 ## Criação do projeto
 - Visual Studio
 - ASP.NET Core Web Application
@@ -18,12 +24,6 @@ Abra o projeto clicando duas vezes no arquivo `curso.sln`, em seguida execute o 
 
 ## Executar o projeto curso.api
 Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em seguida abra o endereço no navegador.
-
-## Objetivo front-end
-- Configurar o front-end
-- Design Pattern MVC
-- Integrar com o back-end
-- Proteger o front-end
 
 ## Entendendo o código:
 `web-mvc\curso.web.mvc\Views\Shared\_Layout.cshtml`: É o menu da aplicação. <br>
@@ -49,3 +49,30 @@ Validações foram adicionadas, por exemplo:
 
 2. O campo é obrigatório:
 >[Required(ErrorMessage = "A senha é obrigatória")]
+
+## Integrando com o backend
+- Remoção dos mocks
+- Realizando integração com o HttpClient
+- Refatorando com a biblioteca Refit
+
+## Integração com o HttpClient
+No arquivo `UsuarioController.cs`:
+```
+var clientHandler = new HttpClientHandler();
+clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+
+var httpClient = new HttpClient(clientHandler);
+httpClient.BaseAddress = new Uri("https://localhost:5001/");
+var registrarUsuarioViewModelInputJson =  JsonConvert.SerializeObject(registrarUsuarioViewModelInput);
+var httpContent = new StringContent(registrarUsuarioViewModelInputJson, Encoding.UTF8, "application/json");
+
+var httpPost = httpClient.PostAsync("/api/v1/usuario/registrar", httpContent).GetAwaiter().GetResult();
+
+if(httpPost.StatusCode == System.Net.HttpStatusCode.Created)
+{
+    ModelState.AddModelError("", "Os dados foram cadastrado com sucesso");
+}
+else
+{
+    ModelState.AddModelError("", "Erro ao cadastrar");
+```
