@@ -174,5 +174,15 @@ public async Task<IActionResult> Cadastrar(RegistrarUsuarioViewModelInput regist
             return View();
         }
 ```
-5. Protegemos o curso com:
+5. Protegemos o projeto no arquivo `CursoController.cs` (Caso abra o projeto na guia anônima, não será possível abrir o projeto):
 >[Microsoft.AspNetCore.Authorization.Authorize]
+
+6. Autenticação se o usuário está logado:
+```
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+.AddCookie(options =>
+{
+   options.LoginPath = "/Usuario/Logar";
+   options.AccessDeniedPath = "/Usuario/Logar";
+});    
+```
