@@ -14,7 +14,7 @@ Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 - Web Application (Model-View-Controller)
 
 ## Executar o projeto curso.web.mvc
-- Clique com o botão direito em um dos projeto > Set as Startup Project > Clique no botão do Visual Studio de executar o projeto
+- Abra o projeto clicando duas vezes no arquivo `curso.sln`, em seguida execute o projeto no Visual Studio clicando no botão `IIS Express`
 
 ## Executar o projeto curso.api
 No projeto/terminal digite:
