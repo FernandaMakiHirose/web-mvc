@@ -17,8 +17,7 @@ Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 - Abra o projeto clicando duas vezes no arquivo `curso.sln`, em seguida execute o projeto no Visual Studio clicando no botão `IIS Express`
 
 ## Executar o projeto curso.api
-No projeto/terminal digite:
-`docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=App@223020" --name sqldica -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest`
+Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em seguida abra o endereço no navegador.
 
 Passo 2:
 `docker start sqldica`
