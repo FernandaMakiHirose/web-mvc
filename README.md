@@ -19,15 +19,6 @@ Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 ## Executar o projeto curso.api
 Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em seguida abra o endereço no navegador.
 
-Passo 2:
-`docker start sqldica`
-
-Passo 3:
-`docker logs sqldica`
-
-Passo 4:
-Quando o projeto abrir, no Authorize escreva: `Bearer`
-
 ## Objetivo front-end
 - Configurar o front-end
 - Design Pattern MVC
