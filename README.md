@@ -174,3 +174,5 @@ public async Task<IActionResult> Cadastrar(RegistrarUsuarioViewModelInput regist
             return View();
         }
 ```
+5. Protegemos o curso com:
+>[Microsoft.AspNetCore.Authorization.Authorize]
