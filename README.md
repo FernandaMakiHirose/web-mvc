@@ -186,3 +186,34 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
    options.AccessDeniedPath = "/Usuario/Logar";
 });    
 ```
+
+## Quiz
+### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
+Cliente.
+    
+### Quando precisamos utilizar HttpClientHandler?
+Customizar o objeto HttpClient, como por exemplo, desabilitar certificado digital do lado do cliente em tempo de desenvolvimento. 
+
+### O MVC Pattern é um padrão arquitetural?
+Falso.
+
+### Qual a finalidade do Microsoft Identity?
+Configuração Autenticação e autorização.
+
+### Em caso de não sucesso do retorno da biblioteca Refit, qual é o tipo de exception a ser recuperada?
+ApiException.
+
+### Baseado em um mecanismo de autenticação e autorização JWT, qual o tipo de informação devemos enviar o token headers?
+Autorization : Bearer.
+
+### No padrão MVC qual a responsabilidade de uma controller?
+Orquestrar entra a view e o model.
+
+### A classe HttpClient é utilizada para qual finalidade?
+Realizar integração com webservices.
+
+### Qual atributo  é responsável para configurarmos um ou mais propriedades da Model quando é obrigatório?
+[Required].
+
+### É correto afirmar que um handler nos ajuda a interceptação antes de request?
+Verdadeiro.
