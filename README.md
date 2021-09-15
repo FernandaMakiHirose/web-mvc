@@ -32,7 +32,7 @@ Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em segui
 `web-mvc\Models`: Apresenta o Json convertido para C#. O Json foi pego na documentação (Swagger). <br>
 
 ## Como criar a controller?
-1. Clique com o botão direito no diretório Controller > Add > Controller > MVC Controller - Empty > Dê o nome da controller
+Clique com o botão direito no diretório Controller > Add > Controller > MVC Controller - Empty > Dê o nome da controller
 
 ## Como criar a view?
 Clique com o botão direito no diretório da View > Razor View > Template: Create > Model class (insira a classe Model criada para determinada view)
