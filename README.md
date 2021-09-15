@@ -123,3 +123,54 @@ public async Task<IActionResult> Cadastrar(RegistrarUsuarioViewModelInput regist
         ModelState.AddModelError("", ex.Message);
     }
 ```
+
+## Token
+1. No arquivo `Startup.cs` adicionei:
+>.AddHttpMessageHandler<BearerTokenMessageHandler>()
+    
+2. No arquivo `ICursoService.cs` adicionei:
+>[Headers("Authorization: Bearer")] 
+    
+3. No arquivo `BearerTokenMessageHandler.cs` criamos o código que mostra uma mensagem do Bearer Handler
+4. No arquivo `UsuarioController.cs` foi adicionado o seguinte código:
+```
+[HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logar(LoginViewModelInput loginViewModelInput)
+        {
+            try
+            {
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var usuario = await _usuarioService.Logar(loginViewModelInput);
+
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, usuario.Usuario.Codigo.ToString()),
+                    new Claim(ClaimTypes.Name, usuario.Usuario.Login),
+                    new Claim(ClaimTypes.Email, usuario.Usuario.Email),
+                    new Claim("token", usuario.Token),
+                };
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var authProperties = new AuthenticationProperties
+                {
+                    ExpiresUtc = new DateTimeOffset(DateTime.UtcNow.AddDays(1))
+                };
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity), authProperties);
+
+                ModelState.AddModelError("", $"O usuário está autenticado {usuario.Token}");
+            }
+            catch (ApiException ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex.Message);
+            }
+
+            return View();
+        }
+```
