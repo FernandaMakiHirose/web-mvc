@@ -14,7 +14,7 @@ Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 - Web Application (Model-View-Controller)
 
 ## Executar o projeto curso.web.mvc
-- Abra o projeto clicando duas vezes no arquivo `curso.sln`, em seguida execute o projeto no Visual Studio clicando no botão `IIS Express`
+Abra o projeto clicando duas vezes no arquivo `curso.sln`, em seguida execute o projeto no Visual Studio clicando no botão `IIS Express`
 
 ## Executar o projeto curso.api
 Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em seguida abra o endereço no navegador.
