@@ -35,7 +35,17 @@ Abra o path desse projeto no terminal e execute o comando `dotnet run`. Em segui
 Clique com o botão direito no diretório Controller > Add > Controller > MVC Controller - Empty > Dê o nome da controller
 
 ## Como criar a view?
-Clique com o botão direito no diretório da View > Razor View > Template: Create > Model class (insira a classe Model criada para determinada view)
+Clique com o botão direito no diretório da View > Razor View > Template: Create > 
+1. Model class (insira a classe Model criada para determinada view)
+2. List (cria mais de um dado)
 
 ## Converter um Json para C#
 [Converte um Json em C#](https://json2csharp.com/)
+
+## Validações 
+Validações foram adicionadas, por exemplo:
+1. Validação de e-mail:
+>[EmailAddress(ErrorMessage = "O e-mail é inválido")]
+
+2. O campo é obrigatório:
+>[Required(ErrorMessage = "A senha é obrigatória")]
