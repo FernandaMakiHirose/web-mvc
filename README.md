@@ -79,8 +79,11 @@ else
 
 ## Refit
 1. Instalação da biblioteca Refit no NuGet (`Refit` e `Refit.HttpClientFactory`)
-2. Com ela adicionamos endpoints e deixamos o código assíncrono 
-3. Por fim adicionamos o seguinte código no arquivo `Startup.cs`:
+2. Com ela adicionamos o endpoint Post no arquivo `IUsuarioService.cs`, exemplo:
+>[Post("/api/v1/usuario/registrar")]
+
+3. Deixa o código assíncrono 
+4. Por fim adicionamos o seguinte código no arquivo `Startup.cs`:
 
 ```
 public void ConfigureServices(IServiceCollection services)
@@ -98,4 +101,25 @@ public void ConfigureServices(IServiceCollection services)
         {
             c.BaseAddress = new Uri(Configuration.GetValue<string>("UrlApiCurso"));
         }).ConfigurePrimaryHttpMessageHandler(c => clientHandler);
+```
+
+5. Com o Refit podemos comentar o código da integração com o HttpClient, simplificando assim:
+```
+[HttpPost]
+public async Task<IActionResult> Cadastrar(RegistrarUsuarioViewModelInput registrarUsuarioViewModelInput)
+{
+    try
+    {
+        var usuario = await _usuarioService.Registrar(registrarUsuarioViewModelInput);
+
+        ModelState.AddModelError("", $"Os dados foram cadastrado com sucesso para o login {usuario.Login}");
+    }
+    catch (ApiException ex)
+    {
+        ModelState.AddModelError("", ex.Message);
+    }
+    catch (Exception ex)
+    {
+        ModelState.AddModelError("", ex.Message);
+    }
 ```
