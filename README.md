@@ -186,7 +186,10 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
    options.AccessDeniedPath = "/Usuario/Logar";
 });    
 ```
-## Back-end
+## Objetivo Back-end
+- Configurar as rotas (endpoints)
+- Configuração do Swagger (Instalação do pacota NuGet, Configuração do XML, Configuração do Service (IOC), Habilitar o Middleware
+    
 ### Criação do projeto
 - Visual Studio
 - ASP.NET Core Web Application
@@ -204,6 +207,11 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     "Login": "teste",
     "Senha": "senha"
 ```
+## Swagger
+- Clique com o botão direito no projeto > Propriedades > Build > XML documentation file: curso.api.xml [X] > (Deixe apenas o nome do arquivo e marque a caixinha)
+- Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Swashbuckle.AspNetCore` e `Swashbuckle.AspNetCore.Annotations`)
+- Adicione código no Startup.cs
+- O arquivo `UsuarioController.cs` apresenta códigos do Swagger para ajudar a mandar mensagens
 
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
