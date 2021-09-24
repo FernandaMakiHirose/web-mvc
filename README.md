@@ -5,6 +5,11 @@
 - Visual Studio
 - Docker
 
+## Executar o projeto
+1. Faça o clone do projeto
+2. Clique 2 vezes no arquivo `curso.sln` 
+3. Execute o projeto no Visual Studio
+
 ## Licença
 Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
 
