@@ -9,6 +9,11 @@
 1. Faça o clone do projeto
 2. Clique 2 vezes no arquivo `curso.sln` 
 3. Execute o projeto no Visual Studio
+- O path do projeto `curso.web.mvc` abrirá automaticamente em:
+>https://localhost:44359/
+
+- O path do projeto `curso.api` abrirá automaticamente em:
+>https://localhost:44342/
 
 ## Licença
 Distribuido sob a licença MIT License. Veja `LICENSE` para mais informações.
