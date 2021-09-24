@@ -191,6 +191,7 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 - Configuração do Swagger (Instalação do pacota NuGet, Configuração do XML, Configuração do Service (IOC), Habilitar o Middleware
 - Setup validação de entrada de dados: Criação e Configuração das ViewModels, Configuração do ActionFilter e do Startup
 - Configuração 'provider' JWT
+- Modelar as entidades do banco de dados, implementar a HasForeingKey e configurar o DbContext
     
 ### Criação do projeto
 - Visual Studio
@@ -224,6 +225,10 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     "Secret": "MzfsT&d9gprP>!9$Es(X!5g@;ef!5sbk:jH\\2.}8ZP'qY#7"
   },    
 ```
+    
+## Banco de dados
+- Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Microsoft.Entity.FrameworkCore`, `Microsoft.Entity.FrameworkCore.Relational` e `Microsoft.Entity.FrameworkCore.SqlServer`)
+- Tudo isso fica dentro do diretório `Infraestruture`
     
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
