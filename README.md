@@ -186,7 +186,8 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
    options.AccessDeniedPath = "/Usuario/Logar";
 });    
 ```
-## Criação do projeto
+## Back-end
+### Criação do projeto
 - Visual Studio
 - ASP.NET Core Web Application
 - API
@@ -194,6 +195,15 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 - Habilitar o Docker []
 - Arquivos apagados: `WeatherForecast.cs` e `WeatherForecastController.cs` <br>
 - No arquivo `launchSettings.json` o código `"launchUrl": "weatherforecast"` ficou `"launchUrl": ""`
+    
+## Postman
+- Caso queira usar o Postman para fazer requisição:
+- POST = https://localhost44341/api/Usuario
+- Body, raw, JSON
+```
+    "Login": "teste",
+    "Senha": "senha"
+```
 
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
