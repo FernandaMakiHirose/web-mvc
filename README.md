@@ -227,8 +227,9 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 ```
     
 ## Banco de dados
-- Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Microsoft.Entity.FrameworkCore`, `Microsoft.Entity.FrameworkCore.Relational` e `Microsoft.Entity.FrameworkCore.SqlServer`)
+- Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Microsoft.Entity.FrameworkCore`, `Microsoft.Entity.FrameworkCore.Relational`, `Microsoft.Entity.FrameworkCore.SqlServer` e `Microsoft.EntityFrameworkCore.Tools`)
 - Tudo isso fica dentro do diretório `Infraestruture`
+- O arquivo `DbFactoryDbContext.cs`: gera o versionamento da base
     
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
