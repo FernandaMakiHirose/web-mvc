@@ -186,6 +186,14 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
    options.AccessDeniedPath = "/Usuario/Logar";
 });    
 ```
+## Criação do projeto
+- Visual Studio
+- ASP.NET Core Web Application
+- API
+- Configure for HTTPS [X]
+- Habilitar o Docker []
+- Arquivos apagados: `WeatherForecast.cs` e `WeatherForecastController.cs` <br>
+- No arquivo `launchSettings.json` o código `"launchUrl": "weatherforecast"` ficou `"launchUrl": ""`
 
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
