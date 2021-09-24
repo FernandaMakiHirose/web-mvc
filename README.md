@@ -189,6 +189,8 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 ## Objetivo Back-end
 - Configurar as rotas (endpoints)
 - Configuração do Swagger (Instalação do pacota NuGet, Configuração do XML, Configuração do Service (IOC), Habilitar o Middleware
+- Setup validação de entrada de dados: Criação e Configuração das ViewModels, Configuração do ActionFilter e do Startup
+- Configuração 'provider' JWT
     
 ### Criação do projeto
 - Visual Studio
@@ -210,9 +212,19 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 ## Swagger
 - Clique com o botão direito no projeto > Propriedades > Build > XML documentation file: curso.api.xml [X] > (Deixe apenas o nome do arquivo e marque a caixinha)
 - Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Swashbuckle.AspNetCore` e `Swashbuckle.AspNetCore.Annotations`)
-- Adicione código no Startup.cs
+- Adicionou código no Startup.cs
 - O arquivo `UsuarioController.cs` apresenta códigos do Swagger para ajudar a mandar mensagens
 
+## Configuração 'provider' JWT
+- Clique com o botão direito nas dependências > NuGet > (Instale o pacote: `Microsoft.AspNetCore.Authentication` e `Microsoft.AspNetCore.Authentication.JwtBearer`)
+- Adicionou código no Startup.cs de chave de configuração
+- O arquivo `appsettings.json` apresenta o código da chave de configuração:
+```
+  "JwtConfigurations": {
+    "Secret": "MzfsT&d9gprP>!9$Es(X!5g@;ef!5sbk:jH\\2.}8ZP'qY#7"
+  },    
+```
+    
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
 Cliente.
