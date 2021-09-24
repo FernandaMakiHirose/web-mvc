@@ -261,3 +261,35 @@ Realizar integração com webservices.
 
 ### É correto afirmar que um handler nos ajuda a interceptação antes de request?
 Verdadeiro.
+
+### Documentar API é importar por que?
+Ajudar na comunicação com outros times.
+
+### Qual atributo é responsável para configurarmos um ou mais propriedades da Viewmodel quando é obrigatório?
+[Required]
+
+### A técnica de refatoração nos ajuda a melhorar a manutenção do código a longo prazo.
+Verdadeiro.
+
+### Como podemos desabilitar o model state das controller para validação automática de campos obrigatórios no arquivo statup.cs?
+```
+services.AddControllers().ConfigureApiBeharviorOptions(options => { options.SuppressModelStateInvalidFilter = true }    
+```
+    
+### Seguindo as boas práticas do estilo arquitetural RESTFUL, ao realizar uma chamada a um endpoint do verbo “Post” para criação de um novo recurso, qual é o código do status indicado?
+201.
+
+### O que o Entity Framework é?
+ORM.
+
+### Seguindo as boas práticas do estilo arquitetural RESTFUL, ao realizar uma tentativa a um endpoint sem permissão, qual é o código do status indicado?
+403.
+
+### Seguindo as boas práticas do estilo arquitetural RESTFUL, ao realizar uma tentativa a um endpoint de autenticação sem sucesso, qual é o código do status indicado?
+401.
+
+### Qual a finalidade do provider JWT?
+Autenticação e autorização.
+
+### O Repository Pattern é um padrão arquitetural?
+Falso.
