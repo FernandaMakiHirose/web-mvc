@@ -246,13 +246,17 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 - Aplicar técnicas de refatoração
 - Quando e porquê utilizar teste
 
-## Frameworks de teste
+### Frameworks de teste
 - XUnit
 - Unit
 - MSTest
 
-## Criando o teste
-- Clique com o botão direito na pasta de teste > Add > New Project > xUnit Test Project (.NET Core) > Defina o Project Name e a Location
+### Criando o teste
+Clique com o botão direito na pasta de teste > Add > New Project > xUnit Test Project (.NET Core) > Defina o Project Name e a Location
+
+### Criação do host em memória e definindo padrão de escrita
+- Adicionar dependência: Microsoft.AspNetCore.Mvc.Testing
+- Adicionar referência de projeto: Clique com o botão direito no projeto > Add Project Reference > Adicione a referência
     
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
