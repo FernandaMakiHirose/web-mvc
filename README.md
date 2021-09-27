@@ -241,6 +241,19 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 - Tudo isso fica dentro do diretório `Infraestruture`
 - O arquivo `DbFactoryDbContext.cs`: gera o versionamento da base
     
+## Objetivo teste
+- Configurar uma suite de teste
+- Aplicar técnicas de refatoração
+- Quando e porquê utilizar teste
+
+## Frameworks de teste
+- XUnit
+- Unit
+- MSTest
+
+## Criando o teste
+- Clique com o botão direito na pasta de teste > Add > New Project > xUnit Test Project (.NET Core) > Defina o Project Name e a Location
+    
 ## Quiz
 ### Ao habilitar a dataannsations  [Required] nas nossas model a validação é feita em qual lado?
 Cliente.
