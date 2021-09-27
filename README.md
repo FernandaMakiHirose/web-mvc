@@ -250,7 +250,7 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 
 ### Frameworks de teste
 - XUnit
-- Nunit
+- NUnit
 - MSTest
 
 ### Criando o teste
