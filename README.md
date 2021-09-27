@@ -245,10 +245,12 @@ services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 - Configurar uma suite de teste
 - Aplicar técnicas de refatoração
 - Quando e porquê utilizar teste
+- Gerar dados humano faker
+- Aplicar técnica de refactor
 
 ### Frameworks de teste
 - XUnit
-- Unit
+- Nunit
 - MSTest
 
 ### Criando o teste
@@ -320,3 +322,33 @@ Autenticação e autorização.
 
 ### O Repository Pattern é um padrão arquitetural?
 Falso.
+
+### Qual classe ‘especializada’ precisa definir para o nosso startup do host em memória seja inicializado?
+WebApplicationFactory.
+    
+### Qual biblioteca nos ajuda a gerar dados fake?
+AutoBogus.
+
+### Conforme a pirâmide de testes, é correto afirmar que ao fazer integração como banco de dados este teste é considerado?
+Integração.
+
+### Os testes nos permitem ter mais segurança ao aplicar alguma mudança/melhoria/evolução em nosso código. Qual é o nome dessa técnica?
+Refatoração.
+
+### Host http/https em memória é importante para quê?
+Criamos um contexto do HttpClient, para que possamos realizar testes de integração.
+
+### O que significa a nomenclatura AAA para escrita de testes?
+Arrange, Action e Assert.
+
+### Quais framework de teste estão disponíveis para .NET?
+Xunit, Nunit e MSTest.
+
+### Qual a ordem da semântica para definir os nomes dos testes?
+Quando, Dado e Então.
+
+### Qual interface nos ajuda a configurar um teste para que ele seja executado antes?
+IAsyncLifeTime.
+
+### Qual atributo de anotação que determina que um teste será executado pelo XUnit?
+Fact.
